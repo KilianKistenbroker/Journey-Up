@@ -1,5 +1,6 @@
 # Journey-Up
-This is a 2-D platformer game being made with Android Studio for mobile devices.
+This is a demo of a 2-D platforming game being made with Android Studio 
+for mobile devices.
 
 The purpose of this project is to display my knowledge of data structures,
 programming methodologies, operating system principles, and algorithms using
