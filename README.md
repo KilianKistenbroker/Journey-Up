@@ -10,4 +10,5 @@ My code is in app-> src-> main-> java/com/example/journey_up. Please check the
 README files of the respective packages for a basic understanding of how the
 classes will interact with each other.
 
-This project isn't intended for commercial use.
+This project isn't intended for commercial use, so feel free to use whatever you
+find useful.

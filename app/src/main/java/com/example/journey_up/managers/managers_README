@@ -4,10 +4,10 @@ and searching for objects.
 Objects will be created and sorted during loading time. For sorting, objects will
 first be merge sorted into one big array, before being split into many smaller
 arrays. The number of smaller arrays is dependant on the spacial magnitude of the
-level. The ordering inside each array is dependent on the position of the object's
-x and y-axis positions. Having separate searchable arrays is done to implement a
-proximity type of search, so that the player's current region is the only area being
-searched for player-object collision.
+current in-game level. The ordering inside each array is dependent on the position
+of the object's x and y-axis positions. Having separate searchable arrays is done
+to implement a proximity type of search, so that the player's current region is the
+only area being searched for player-object collision.
 
 On top of this will be a binary search of the specific region. Order of incrementation
 will start from top-left and read left to right before searching down. This is similar
@@ -36,51 +36,52 @@ ex: Class ObjectManager<T>
         ArrayList arrayList;
         ObjectManager<T>(int left, int top, int right, int bottom)
         {
-            //create object
-            //store object into static array
+            // Define left, top, right, and bottom parameters
+            // Store object into static array
         }
 
         draw(Canvas canvas)
         {
-            //perform linear search
-            //draw arrayList[i]
+            // Perform linear search
+            // Draw arrayList[i]
         }
 
         sort(int size)
         {
-            //perform a merge sort
+            // Perform a merge sort
 
             /*
-            split the big array into a number of smaller arrays,
+            Split the big array into a number of smaller arrays,
             where the magnitude of smaller arrays is dependant on
-            the magnitude of size.
+            the magnitude of the 'size' parameter.
             */
         }
 
         search(Player player)
         {
             /*
-            run if-statements or switch statements to determine which
-            region the player is in, to determine which array of objects
-            to search.
+            Run if-statements or switch statements to determine which
+            region the player is in, so that the appropriate array of
+            objects is being searched.
             */
 
             /*
-            perform binary search which compares player x-y coordinate
-            with x-y coordinate of object in arrayList to determine which
-            direction to traverse the array.
+            Perform a binary search which compares a player's x-y coordinate
+            with the x-y coordinate of objects in arrayList to determine which
+            direction to traverse.
             */
 
-            //check for collision
+            // Check for collision
 
             /*
-            if collision is true, then run instructions from the
-            respective object class.
+            If collision is true, then run specific object instructions from the
+            respective object class, using a consistently named dot operator.
+            (e.g. 'arrayList[i].runInstruction()')
             */
         }
 
         clear()
         {
-            //this will clear the arrayList.
+            // This will clear the arrayList.
         }
     }
