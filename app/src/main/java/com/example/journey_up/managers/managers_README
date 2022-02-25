@@ -13,9 +13,9 @@ On top of this will be a binary search of the specific region. Order of incremen
 will start from top-left and read left to right before searching down. This is similar
 to reading a book.
 
-Here is an example of on-screen objects translated into an array.
-
 ******************************************************************************************
+
+Here is an example of on-screen objects translated into an array.
 
 display:
         object 1          object 3
