@@ -1,0 +1,7 @@
+This package is going to store the lower level logic for the purpose of dynamic scaling
+across multiple mobile devices.
+
+Things like dynamic rendering, proper memory management, proper threading will be
+implemented here. This package will also include other functions that are more specific
+to the game, like a 'Camera' class to imitate player movement, or a 'SceneManager' to
+manage what scene the user is in (e.g. main menu, pause menu, level 1, etc.).

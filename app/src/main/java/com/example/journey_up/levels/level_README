@@ -1,0 +1,32 @@
+This package is going to store the 'Level' classes.
+
+The 'Level' class is where we build the objects to be displayed on screen
+for the user to interact with. To do this, I will call manager classes to
+create the objects.
+
+will likely create one dynamic 'ObjectManager' class to store all objects into a single
+ArrayList. 'ObjectManager' will be in charge of the sorting and searching of objects
+for player-object collision detection. 'Objects' will decide what to do if a player
+collides with it.
+
+Here is a basic look at the structure of a level, where draw() and search() will run
+in parallel.
+
+ex: Class Level
+    {
+        ObjectManager<T> object = new ObjectManager<T> (
+        int left, int top, int right, int bottom);
+
+        draw(Canvas canvas)
+        {
+            ObjectManager.draw(canvas);
+        }
+
+        search()
+        {
+            ObjectManager.search();
+        }
+    }
+
+T will determine the type of object to be created, defined in 'objects' package, and the
+parameters will specify where to put the object on the screen.
