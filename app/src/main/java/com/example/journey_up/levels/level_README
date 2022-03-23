@@ -5,7 +5,7 @@ for the user to interact with. Objects will be built through the
 'ObjectManager' class.
 
 Here is a basic look at the structure of a level, where draw() and search()
-will run in parallel.
+will run on separate synchronized threads.
 
 ex: Class Level
     {

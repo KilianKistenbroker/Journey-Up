@@ -5,3 +5,13 @@ Things like dynamic rendering, proper memory management, proper threading will b
 implemented here. This package will also include other functions that are more specific
 to the game, like a 'Camera' class to imitate player movement, or a 'SceneManager' to
 manage what scene the user is in (e.g. main menu, pause menu, level 1, etc.).
+
+threads will involve the following:
+    1. draw(): this will draw all objects on screen.
+    2. search(): this will be an in-game collision detection algorithm, which runs a binary
+        searches for player-object collision. This must be synced with draw() to avoid race
+        conditions.
+    3. timer(): runs an internal clock to track total time played on the app. This thread will
+        also have child threads for running in-game timers.
+    4. sort(): this will be used during loading screens to sort ObjectManger array of objects
+        depending on their x and y coordinates.
