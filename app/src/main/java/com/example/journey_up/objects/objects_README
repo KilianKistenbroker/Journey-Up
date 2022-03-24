@@ -6,9 +6,6 @@ instructions the object needs to perform if the ObjectManager finds that a
 player has collided with that specific object.
 
 
-    id keys:
-    1 : platforms
-    2 : items
 
 
 

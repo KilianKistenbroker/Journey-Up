@@ -2,7 +2,7 @@ package com.example.journey_up.objects;
 
 public class MyObjects {
 
-    // see objects_README for id key definitions
+    // CHANGE: have unique classes per object
 
     int id = 0;
     int region = 0;

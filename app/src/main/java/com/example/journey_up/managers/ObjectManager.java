@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 public class ObjectManager implements GameInterface {
 
+    // CHANGE: have unique manager classes per object. Make this class a manager of managers
+    // CHANGE: Move this logic to manager classes of specific object.
+
     // this is a 2-d array where objects are separated by region/location
     public ArrayList<ArrayList<MyObjects>> objectList;
 

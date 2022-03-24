@@ -29,59 +29,24 @@ array: {object 1, object 3, object 2, object 5, object 4}
 
 ******************************************************************************************
 
-Here is a basic idea of the ObjectManager class:
+objectManager will be in charge of sorting all sub-manager arrayLists. sorting thread is
+created when objectManager.sort() is called.
 
-ex: Class ObjectManager<T>
-    {
-        ArrayList arrayList;
-        ObjectManager<T>(int left, int top, int right, int bottom)
-        {
-            // Define left, top, right, and bottom parameters
-            // Store object into static array
+ex: Class ObjectManager {
+        void sort() {
+            PlatformManager.sort();
+            ItemManager.sort();
+            ...
         }
+    }
 
-        draw(Canvas canvas)
-        {
-            // Perform linear search
-            // Draw arrayList[i]
-        }
+objectManager will also be in charge of resetting/clearing objects from sub-manager
+arrayLists.
 
-        sort(int size)
-        {
-            // Perform a merge sort
-
-            /*
-            Split the big array into a number of smaller arrays,
-            where the magnitude of smaller arrays is dependant on
-            the magnitude of the 'size' parameter.
-            */
-        }
-
-        search(Player player)
-        {
-            /*
-            Run if-statements or switch statements to determine which
-            region the player is in, so that the appropriate array of
-            objects is being searched.
-            */
-
-            /*
-            Perform a binary search which compares a player's x-y coordinate
-            with the x-y coordinate of objects in arrayList to determine which
-            direction to traverse.
-            */
-
-            // Check for collision
-
-            /*
-            If collision is true, then run specific object instructions from the
-            respective object class, using a consistently named dot operator.
-            (e.g. 'arrayList[i].runInstruction()')
-            */
-        }
-
-        clear()
-        {
-            // This will clear the arrayList.
+ex: Class ObjectManager {
+        void reset() {
+            PlatformManager.reset();
+            InGameTimerThread.cancel();
+            ...
         }
     }
