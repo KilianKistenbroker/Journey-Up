@@ -13,7 +13,7 @@ public class Platform {
     objects to fit various screen sizes.
      */
 
-    int region = 0;
+    public int region = 0;
     int UNIT;
     int GROUND;
 
@@ -36,8 +36,9 @@ public class Platform {
 
     private static final String TAG = "msg";
 
-    public Platform(int left, int top, int right, int height, int l, int t, int r, int b) {
-        this.platform = new Rect(UNIT * left, GROUND - UNIT * top, right,
+    public Platform(int region, int left, int top, int right, int height, int l, int t, int r, int b) {
+        this.region = region;
+        this.platform = new Rect(region * UNIT * left, GROUND - UNIT * top, region * right,
                 GROUND - UNIT * top + UNIT * height);
         this.left = left;
         this.right = right;
@@ -67,10 +68,6 @@ public class Platform {
             xCount++;
         }
 
-    }
-
-    public void setRegion(int region) {
-        this.region = region;
     }
 
     public void work() {
