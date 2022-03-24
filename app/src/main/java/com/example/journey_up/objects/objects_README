@@ -2,8 +2,8 @@ This package will store various types of objects for the player to collide with.
 
 Objects will contain defined classes of 'Platforms', 'Items', 'LaunchPads', and
 so on, for the player to interact with. The defined classes will contain the
-instructions the object needs to perform if the ObjectManager finds that a
-player has collided with that specific object.
+instructions the object needs to perform if their respective manager finds that
+a player has collided with said object.
 
 
 

@@ -1,13 +1,14 @@
-This package will store the 'ObjectManager' which is in charge of creating, sorting,
-and searching for objects.
+This package will store the 'ObjectManager' which is in charge of managing the
+sub-managers. It will be in charge of telling sub-managers to sort() their
+ArrayLists and be responsible for clearing/resetting levels.
 
-Objects will be created and sorted during loading time. For sorting, objects will
-first be merge sorted into one big array, before being split into many smaller
-arrays. The number of smaller arrays is dependant on the spacial magnitude of the
-current in-game level. The ordering inside each array is dependent on the position
-of the object's x and y-axis positions. Having separate searchable arrays is done
-to implement a proximity type of search, so that the player's current region is the
-only area being searched for player-object collision.
+Objects will be created and sorted during loading time. For sorting, each region
+will be merge sorted. Having separate regions is accomplished by having a 2-d
+ArrayList where each index of the 1st dimension represents the current region of
+the player. This is done to implement a proximity type of search, so that only
+relevant areas are being rendered and searched for player-object collision. The
+ordering inside each array is dependent on the location of the object's x and
+y-axis positions.
 
 On top of this will be a binary search of the specific region. Order of incrementation
 will start from top-left and read left to right before searching down. This is similar
@@ -15,7 +16,7 @@ to reading a book.
 
 ******************************************************************************************
 
-Example of on-screen objects translated into an array:
+Example of on-screen objects translated into a searchable array:
 
 display:
         object 1          object 3

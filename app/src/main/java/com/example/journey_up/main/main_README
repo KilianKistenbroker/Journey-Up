@@ -3,8 +3,8 @@ across multiple mobile devices.
 
 Things like dynamic rendering, proper memory management, proper threading will be
 implemented here. This package will also include other functions that are more specific
-to the game, like a 'Camera' class to imitate player movement, or a 'SceneManager' to
-manage what scene the user is in (e.g. main menu, pause menu, level 1, etc.).
+to the game, like a 'Camera' class to imitate player movement, or a 'PlayerBank' to
+manage a players collected items.
 
 My threads will involve the following:
     1. MainThread: will run draw() and update() in sync. draw() will draw all objects on screen.

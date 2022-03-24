@@ -2,26 +2,5 @@ This package is going to store the 'Level' classes.
 
 The 'Level' class is where objects will be built and displayed on screen
 for the user to interact with. Objects will be built through the
-'ObjectManager' class.
-
-Here is a basic look at the structure of a level, where draw() and search()
-will run on separate synchronized threads.
-
-ex: Class Level
-    {
-        ObjectManager<T> object = new ObjectManager<T> (
-        int left, int top, int right, int bottom);
-
-        draw(Canvas canvas)
-        {
-            ObjectManager.draw(canvas);
-        }
-
-        search()
-        {
-            ObjectManager.search();
-        }
-    }
-
-T will determine the type of object to be created, defined in 'objects' package, and the
-parameters will specify where to put the object on the screen.
+objects respective manager, for the purpose of storing them into a
+searchable ArrayList.
