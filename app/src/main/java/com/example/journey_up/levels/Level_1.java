@@ -31,14 +31,12 @@ public class Level_1 implements GameInterface {
 
     //beginLevel() will be called when the start button is pressed from LevelInterface.
 
-    public void beginLevelCollision() {
+    public void beginLevel() {
         /*
          run CollisionThread.runCollision(); must communicate with LevelInterface to determine current state
          of game (i.e. paused, game over, etc...).
          */
-    }
 
-    public void beginLevelTimer() {
         // runs in-game timer thread. Must also communicate with LevelInterface to pause timer when game is paused.
     }
 
