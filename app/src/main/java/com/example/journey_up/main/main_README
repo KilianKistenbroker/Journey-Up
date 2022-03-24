@@ -20,6 +20,6 @@ My threads will involve the following:
         depending on their x and y coordinates. Must communicate with mainThreads draw() to
         render a proper loading bar. Exists inside the level loading.
 
-    5. SearchingThread: This will be an in-game collision detection algorithm, which runs a binary
+    5. CollisionThread: This will be an in-game collision detection algorithm, which runs a binary
         search for player-object collision. Exists inside the level
 
