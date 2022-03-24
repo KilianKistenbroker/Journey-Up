@@ -6,12 +6,20 @@ implemented here. This package will also include other functions that are more s
 to the game, like a 'Camera' class to imitate player movement, or a 'SceneManager' to
 manage what scene the user is in (e.g. main menu, pause menu, level 1, etc.).
 
-threads will involve the following:
-    1. draw(): this will draw all objects on screen.
-    2. search(): this will be an in-game collision detection algorithm, which runs a binary
-        searches for player-object collision. This must be synced with draw() to avoid race
-        conditions.
-    3. timer(): runs an internal clock to track total time played on the app. This thread will
-        also have child threads for running in-game timers.
-    4. sort(): this will be used during loading screens to sort ObjectManger array of objects
-        depending on their x and y coordinates.
+My threads will involve the following:
+    1. MainThread: will run draw() and update() in sync. draw() will draw all objects on screen.
+        update() will change the coordinates of the objects being drawn. Exists inside the app.
+
+    2. InternalTimerThread: will run a internal clock to track amount of time played. This will
+        also restore lives after a certain amount of time has passed. Exists inside the app.
+
+    3. InGameTimerThread: will run a thread of in-game countdowns. (might merge with InternalTimerThread).
+        Exists inside the level.
+
+    4. SortingThread: will be used during loading screens to sort ObjectManger array of objects
+        depending on their x and y coordinates. Must communicate with mainThreads draw() to
+        render a proper loading bar. Exists inside the level loading.
+
+    5. SearchingThread: This will be an in-game collision detection algorithm, which runs a binary
+        search for player-object collision. Exists inside the level
+

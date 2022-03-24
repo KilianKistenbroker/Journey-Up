@@ -19,6 +19,7 @@ public class ObjectManager implements GameInterface {
     public void add(MyObjects myObjects, int region) {
 
         // checks if there is enough space in the arrayList
+
         if (objectList.size() < region) {
             for (int i = 0; i < region - objectList.size(); i++)
                 objectList.add(new ArrayList<>());
@@ -30,11 +31,13 @@ public class ObjectManager implements GameInterface {
     private void searchInRegion(int region) {
         // use collision detection logic here, with binary traversal.
 
+        // work is received by 'MyObjects' when collision occurs
     }
 
     private void drawInRegion(int region) {
 
         // runs linear time complexity rendering for specific region
+
         for (int i = 0; i < objectList.get(region).size(); i++) {
             //get objects unique draw instructions
             objectList.get(region).get(i).draw();
@@ -55,8 +58,9 @@ public class ObjectManager implements GameInterface {
 
     @Override
     public void draw(Canvas canvas) {
-        // run linear for-loop for drawing objects from arrayList
+        // use switch statement here to draw in specific region.
 
+        // run linear for-loop for drawing objects from arrayList
     }
 
     @Override
